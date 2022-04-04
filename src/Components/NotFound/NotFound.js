@@ -1,5 +1,7 @@
 import React from 'react';
+import Scarecrow from '../../Assets/notFoundPicture/Scarecrow.png'
 import { Link } from 'react-router-dom';
+import './NotFound.css'
 
 const NotFound = () => {
     return (
@@ -11,13 +13,13 @@ const NotFound = () => {
             </header>
 
             <div className='content'>
-                <img src="" className='image' alt="" />
+                <img src={Scarecrow} className='image' alt="" />
                 <article>
                     <h2 className='info-title'>I have a bad news for you</h2>
                     <p className='info-description'>
                         The page you are looking for is temporarily unavailable.
                     </p>
-                    <Link to='/'>
+                    <Link className='info-btn' to='/'>
                         Back to Homepage
                     </Link>
                 </article>
