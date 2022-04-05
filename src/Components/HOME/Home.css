@@ -15,7 +15,7 @@
 	box-sizing: border-box;
 	padding: 1em 2em;
 	color: #fff;
-	background-color: #54bbe7;
+	background-color: #5494e7;
 	text-transform: uppercase;
 	text-decoration: none;
 	transition: all 400ms;
@@ -36,4 +36,31 @@
 .right-image img{
     height: 404px;
     width: 293px;
+}
+
+
+
+.customerRivews{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+.reviewHeading{
+    text-align: center;
+    color: #3481a1;
+    text-decoration: underline;
+}
+.homePageReviews{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0px auto;
+}
+.homePageReviews .reviewSingleCart{
+    border: 2px solid rgb(46, 83, 46);
+    margin: 10px;
+    padding: 7px;
+    width: 300px;
+    background-color: rgba(68, 146, 247, 0.87);
+    color: #fff;
+    border-radius: 5px;
 }

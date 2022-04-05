@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Boss from '../../Assets/homePicture/boss.jpg'
+import UserReviews from '../CoustomHook/CoustomHook';
 import './Home.css'
 
 const HOME = () => {
+    const [reviews, setReviews] = UserReviews();
     return (
         <div>
             <div className='home-page'>
@@ -24,6 +26,29 @@ const HOME = () => {
                     <img src={Boss} alt="" />
                 </div>
 
+            </div>
+
+            <div className='customerRivews'>
+                <h1 className='reviewHeading'>
+                    Customer Reviews
+                </h1>
+                <div className='homePageReviews'>
+                    {
+                        reviews.slice(0, 3).map(review => <div className='reviewSingleCart'>
+                            <h4>Customer Name: {review.name} </h4>
+                            <p>
+                                <strong>Customer Comment:</strong>  {review.reviewtext}
+                            </p>
+                            <strong>Ratting: {review.ratting} </strong>
+                        </div>)
+                    }
+                </div>
+                
+                <div style={{textAlign:"center", margin:"20px 0px"}}>
+                    <Link className='home-btn' to='/reviews'>
+                        See All Reviews
+                    </Link>
+                </div>
             </div>
         </div>
     );
